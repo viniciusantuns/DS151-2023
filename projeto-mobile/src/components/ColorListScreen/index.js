@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {SafeAreaView, View, FlatList, Text,Button } from "react-native";
+import { View, FlatList, Button } from "react-native";
 
 
 
@@ -10,9 +10,6 @@ import {SafeAreaView, View, FlatList, Text,Button } from "react-native";
 export default function ColorListScreen(){
     const [colors,setColors] = useState([]);
 
-    const DATA =[
-    ]
-
     function generateColor() {
         const r = Math.floor(Math.random() * 255);
         const g = Math.floor(Math.random() * 255);
@@ -20,22 +17,9 @@ export default function ColorListScreen(){
         setColors(prev => [...prev, `rgb(${r}, ${g},${b})`]);
     }
 
-
-
-    const Item = ({title}) => (
-        <View style={{flex:1 , alignItems:'center', justifyContent:'center'}}>
-            <Text>{title}</Text>
-        </View>
-    )
-
-    const addColor = () =>{
-        DATA.push(generateColor())
-    }
-
-
     return (
         <View>
-            <Button title="Adiciona Cor" onPress={()=>addColor()}/>
+            <Button title="Adiciona Cor" onPress={()=>generateColor()}/>
             <FlatList
                 data={colors}
                 horizontal={true}

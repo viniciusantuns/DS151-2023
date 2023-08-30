@@ -22,6 +22,9 @@ export default function HomeScreen({navigation}){
             <Button title="Ir para Color List!"
                                      onPress={ () => navigation.navigate('ColorList')}
             />
+            <Button title="Ir para Galeria!"
+                                     onPress={ () => navigation.navigate('Galery')}
+            />
         </SafeAreaView>
     )
 

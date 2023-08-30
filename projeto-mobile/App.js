@@ -1,12 +1,11 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet} from 'react-native';
 import Form from './src/components/Form';
-import Title from './src/components/Title';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
 import HomeScreen from './src/components/HomeScreen';
 import CounterScreen from './src/components/CounterScreen';
 import ColorListScreen from './src/components/ColorListScreen';
+import GaleryScrenn from './src/components/GaleryScreen';
 
 const Stack = createStackNavigator();
 
@@ -18,6 +17,7 @@ export default function App() {
         <Stack.Screen name="Media" component={Form}/>
         <Stack.Screen name="Counter" component={CounterScreen}/>
         <Stack.Screen name="ColorList" component={ColorListScreen}/>
+        <Stack.Screen name="Galery" component={GaleryScrenn}/>
     </Stack.Navigator>
   </NavigationContainer>
   );
